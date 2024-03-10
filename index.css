@@ -1,0 +1,309 @@
+*{
+    margin:0px;
+    font-family: sans-serif;
+}
+
+.title{
+    background-color: black;
+}
+p{
+    color:inherit;
+    text-decoration: none;
+    
+}
+.list1{
+    list-style-type: none;
+}
+.list-space{
+    margin-left:35px;
+}
+
+.button1{
+    border-color: rgb(248, 250, 250);
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(109, 127, 127);
+    font-weight: bolder;
+    font-size: 145%;
+    margin-top: -13px;
+    padding: 8px
+}
+
+.a1{
+    text-decoration: none !important;
+    color:rgb(14, 37, 86);
+    font-weight:bolder;
+    font-size: 145%;
+}
+
+.a2{
+    text-decoration: none !important;
+    color:rgb(247, 247, 249);
+    font-weight:bolder;
+    font-size: 145%;
+}
+
+.a1:hover{
+    transition: .5s ease;
+    color:rgb(14, 37, 86);
+}
+
+.a2{
+    text-decoration: none !important;
+    color:rgb(251, 251, 253);
+    font-weight:bolder;
+    font-size: 145%;
+}
+
+.a2:hover{
+    transition: .5s ease;
+    color:red;
+}
+
+.red{
+    color:red;
+}
+
+.item:hover{
+    font-weight: bold;
+    text-decoration: underline !important;
+}
+
+.img1{
+    height: 240px;
+    border-radius: 10px;
+    width:100%;
+    padding-bottom :24px;
+}
+
+.img1_1{
+    border-radius: 10px;
+    width: 160px;
+    float: left;
+    margin: 17px;
+}
+
+.img1:hover {
+    transition: .5s ease;
+    opacity: 0.6;
+}
+
+.heading:hover{
+    transition: .5s ease;
+    color:rgb(254, 3, 3) !important;
+}
+
+.button1:hover{
+    transition: .5s ease;
+    color:rgb(4, 4, 4) !important;
+    background-color: white;
+}
+
+.star_img{
+    position:relative;
+    bottom:-4px;
+    height:20px;
+    width:20px;
+}
+
+
+#container{
+    width: auto;
+}
+#header{
+    height: 126px;
+    width: auto;
+}
+#footer{
+    height: 199px;
+    width: 1264px;
+    background-color: rgb(10, 25, 58);
+}
+#content{
+    height: 1316px;
+    width: 1264px;
+    background-color: rgb(254, 253, 253);
+}
+.img2{
+    width:100%;
+}
+#menu{
+    height: 1316px;
+    width:300px;
+    top:88px;
+    background-color: rgb(24 53 115);
+    border-right: 2px solid gray;
+    float: left;
+    opacity:2px;
+}
+#contentarea{
+    height: 896px;
+    width:960px;
+    background-color: white;
+    border-right: 2px solid gray;
+    float: left;
+}
+
+.card{
+    height:370px;
+    width:260px;
+    border:3px solid rgb(14, 37, 86);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 24px;
+    box-sizing: border-box;
+    float: left;
+    margin: 30px;
+    padding: 10px;
+}
+.card1{
+    height: 396px;
+    width: 387px;
+    border:3px solid rgb(14, 37, 86);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 1px 5px 14px;
+    box-sizing: border-box;
+    float: left;
+    margin: 17px;
+    padding: 10px;
+}
+.card_child{
+    height: 181px;
+    width: 198px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    margin: -9px;
+    padding: 1px;
+}
+.row{
+    display: flex;
+}
+
+.search_box{
+    height: 38px;
+    width: 656px;
+    margin-top: 20px;
+    padding-left: 23px;
+    border-radius: 29px;
+    border: 3px solid rgb(14, 37, 86);
+}
+
+.heading{
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    margin-top: 12px;
+}
+
+.options{
+    text-decoration: none !important;
+    color:rgb(251, 251, 253);
+    font-size: 122%;
+}
+
+.hamburger2 {
+    font-size: 25px;
+    color:white;
+    display: none;
+  }
+
+.hamburger1 {
+  font-size: 25px;
+  color:rgb(14, 37, 86);
+  display: none;
+}
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+#menu1{
+    list-style-type: none;
+    display:flex; 
+    position:relative; 
+    top:5px;
+}  
+
+#nav1{
+    display: flex;
+    height: 88px;
+    width: auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+#nav2{
+    display: flex;
+    background-color: rgb(14, 37, 86);
+    height: 39px;
+    justify-content: center;
+}
+
+#nav1_1{
+    display:flex; 
+    gap:34px;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 3px;
+    display: none;
+    left: 20px;
+    top: 38px;
+  }
+
+  .dropdown li {
+    width: 80px;
+    padding: 5px 0px;
+  }
+
+  .dropdown li a {
+    text-align: left;
+  }
+
+  .dropdown li a:hover {
+    color: pink;
+  }
+
+.list-space :hover .dropdown {
+display: block;
+
+}  
+
+@media screen and (max-width:700px) {
+
+#menu1{
+    display: none;
+
+}
+    
+.hamburger2 {
+    font-size: 25px;
+    color:white;
+    display: block;
+    }
+
+.hamburger1 {
+    font-size: 40px;
+    color:rgb(14, 37, 86);
+    display: block;
+    }  
+
+#header #nav1_1{
+    display:none;
+}   
+}
+
+@media screen and (max-width:1214px) {
+    
+    #header #search{
+        display:none;
+    }
+    
+}       
