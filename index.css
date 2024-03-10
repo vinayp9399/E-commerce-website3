@@ -116,17 +116,17 @@ p{
 }
 #footer{
     height: 199px;
-    width: 1264px;
+    width: auto;
     background-color: rgb(10, 25, 58);
 }
 #content{
     height: 1316px;
-    width: 1264px;
+    width: auto;
     background-color: rgb(254, 253, 253);
 }
 .img2{
     width:100%;
-    height:450px;
+    height:425px;
 }
 #menu{
     height: 1316px;
@@ -139,7 +139,7 @@ p{
 }
 #contentarea{
     height: 896px;
-    width:960px;
+    width:auto;
     background-color: white;
     border-right: 2px solid gray;
     float: left;
@@ -154,7 +154,7 @@ p{
     box-shadow: 10px 10px 24px;
     box-sizing: border-box;
     float: left;
-    margin: 30px;
+    margin: 28px;
     padding: 10px;
 }
 .card1{
@@ -166,7 +166,7 @@ p{
     box-shadow: 1px 5px 14px;
     box-sizing: border-box;
     float: left;
-    margin: 17px;
+    margin: 14px;
     padding: 10px;
 }
 .card_child{
@@ -241,6 +241,7 @@ p{
     display: flex;
     background-color: rgb(14, 37, 86);
     height: 39px;
+    margin: auto;
 }
 
 #nav1_1{
