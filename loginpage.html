@@ -6,7 +6,6 @@
     <title>Big Commerce</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
-    <script src="loginpage.js" defer></script>
 </head>
 <body>
     
@@ -16,7 +15,7 @@
         <a href="index.html"><img style="height:77px; width:290px; padding:5px;" src="https://logos-download.com/wp-content/uploads/2018/09/BigCommerce_Logo.png" alt=""></a>
     </div>
     <div id="content">
-            <form class="login1" method="post" action="xyz.html">
+            <form class="login1" onsubmit="submit1()" method="post" action="xyz.html">
             <h1 style="color:rgb(14, 37, 86);">Create Account</h1><br>
                 <label><strong>First Name:</strong></label><br> 
                 <input id="fname" style="height:24px; width:339px;" type="text" name="firstname" required><br><br>
@@ -28,7 +27,7 @@
                 <input id="email" style="height:24px; width:339px;" type="email" name="email" required> <br><br> 
                 <label><strong>Mobile No.:</strong></label><br>
                 <input id="mob_no" style="height:24px; width:339px;" type="tel" name="Phone_No." required><br><br>
-                <input onclick="submit()" class="submit_button" type="submit" value="Sign In" name="submit"/>
+                <input class="submit_button" type="submit" value="Sign In" name="submit"/>
             </form>
         </div>    
     </div>
@@ -38,5 +37,6 @@
         <li><a class="a2" href="#header"><p>Back to top</p></a></li></ul>
     </div>
 </div>
+<script src="loginpage.js" defer></script>
 </body>
 </html>
