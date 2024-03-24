@@ -13,5 +13,5 @@ function muimagegalary(){
     }
 }
 muimagegalary();
-setInterval(muimagegalary,5000);
+setInterval(muimagegalary,3000);
 
