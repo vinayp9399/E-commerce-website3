@@ -319,10 +319,18 @@ input[type="checkbox"]:checked~#menu1 {
       width:100%;
       position:absolute;
       left: -41px;
-      line-height: 33px;
+      line-height: 43px;
       top:125px;
+      background-color: rgb(21, 56, 131);
+    }   
+
+#menu1 li:hover {
       background-color: rgb(14, 37, 86);
-    }    
+    }
+.a2:hover{
+    transition: .5s ease;
+    color:white;
+}           
 
 #header #nav1_1{
     gap:20px;
