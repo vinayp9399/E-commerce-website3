@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<style>
+    *{
+    font-family: sans-serif;
+    }
+    #hour{
+        font-size: 50px;
+        color:rgb(2, 253, 2);
+    }
+    #minute{
+        font-size: 50px;
+        color:rgb(2, 253, 2);
+    }
+    #second{
+        font-size: 50px;
+        color:rgb(2, 253, 2);
+    }
+    .block{
+        background-color: black;
+        border: 5px solid grey;
+        width:200px;
+        border-radius: 10px;
+        display:flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .colon{
+        font-size: 50px;
+        color: rgb(250, 248, 248);
+        position:relative;
+        top:-5px;
+    }
+</style>
+
+<script>
+    
+
+    function secondCount(){
+        let currentDate = new Date();
+        currentDate.getHours()>12? document.getElementById("hour").innerHTML = Number(currentDate.getHours())-12 : document.getElementById("hour").innerHTML = currentDate.getHours();
+        document.getElementById("minute").innerHTML = currentDate.getMinutes();
+        document.getElementById("second").innerHTML = currentDate.getSeconds();
+        let a = document.getElementById("second").innerHTML;
+        a = Number(a) + 1;
+        document.getElementById("second").innerHTML = a;
+
+        if(a===10){
+            document.getElementById("second").innerHTML = 0;
+            var b = document.getElementById("minute").innerHTML;
+            b = Number(b) + 1;
+            document.getElementById("minute").innerHTML = b;
+
+        }
+        if(b==10){
+            document.getElementById("minute").innerHTML = 0;
+            var c = document.getElementById("hour").innerHTML;
+            c = Number(c) + 1;
+            document.getElementById("hour").innerHTML = c;
+        }
+        if(c==10){
+            document.getElementById("hour").innerHTML = 1;
+            document.getElementById("minute").innerHTML = 0;
+            document.getElementById("second").innerHTML = 0;
+        }
+    }
+    setInterval(secondCount, 1000);
+    
+
+</script>
+
+<body>
+    <div class="block">
+        <div id="hour"></div>
+        <div class="colon">:</div>
+        <div id="minute"></div>
+        <div class="colon">:</div>
+        <div id="second"></div>
+    </div>
+</body>
+</html>

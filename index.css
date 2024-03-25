@@ -313,14 +313,16 @@ display: block;
     margin:auto;
     }
 
-.hamburger1 {
+/* .hamburger1 {
     font-size: 40px;
     color:rgb(14, 37, 86);
     display: block;
-    }  
+    }   */
 
 #header #nav1_1{
-    display:none;
+    gap:20px;
+    position:relative;
+    bottom:-12px;
 }   
 }
 
