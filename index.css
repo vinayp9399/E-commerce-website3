@@ -313,11 +313,16 @@ display: block;
     margin:auto;
     }
 
-/* .hamburger1 {
-    font-size: 40px;
-    color:rgb(14, 37, 86);
-    display: block;
-    }   */
+input[type="checkbox"]:checked~#menu1 {
+      display: block;
+      height:auto;
+      width:100%;
+      position:absolute;
+      left: -41px;
+      line-height: 33px;
+      top:125px;
+      background-color: rgb(14, 37, 86);
+    }    
 
 #header #nav1_1{
     gap:20px;
