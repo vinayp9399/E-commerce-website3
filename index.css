@@ -3,6 +3,10 @@
     font-family: sans-serif;
 }
 
+ul{
+    list-style-type: none;
+}
+
 .title{
     background-color: black;
 }
@@ -116,8 +120,9 @@ p{
     text-align: center;
 }
 #footer{
-    height: 199px;
+    height: 400px;
     width: auto;
+    color:white;
     background-color: rgb(10, 25, 58);
 }
 #content{
