@@ -21,14 +21,17 @@
         font-size: 50px;
         color:rgb(2, 253, 2);
     }
+    #meridian{
+        font-size: 50px;
+        margin-left:20px;
+        color:rgb(10, 140, 3);
+    }
     .block{
         background-color: black;
         border: 5px solid grey;
-        width:200px;
+        width:300px;
         border-radius: 10px;
-        display:flex;
-        justify-content: center;
-        text-align: center;
+        padding:10px;
     }
     .colon{
         font-size: 50px;
@@ -36,51 +39,79 @@
         position:relative;
         top:-5px;
     }
+
+    #day{
+        color:white;
+        font-size: 20px;
+        text-align: center;
+    }
 </style>
 
 <script>
-    
 
-    function secondCount(){
+    function currentTime(){
         let currentDate = new Date();
+        console.log(currentDate);
         currentDate.getHours()>12? document.getElementById("hour").innerHTML = Number(currentDate.getHours())-12 : document.getElementById("hour").innerHTML = currentDate.getHours();
         document.getElementById("minute").innerHTML = currentDate.getMinutes();
         document.getElementById("second").innerHTML = currentDate.getSeconds();
+        document.getElementById("day").innerHTML = String(currentDate).slice(0,16);
+        if(Number(currentDate.getHours())>12){
+            document.getElementById("meridian").innerHTML = "PM";
+        }
+        else if(Number(currentDate.getHours())<12){
+            document.getElementById("meridian").innerHTML = "AM";     
+        }
+
+    }
+   
+
+    function secondCount(){
+        let currentDate1 = new Date();
         let a = document.getElementById("second").innerHTML;
         a = Number(a) + 1;
         document.getElementById("second").innerHTML = a;
 
-        if(a===10){
+        if(Number(currentDate1.getHours())>12){
+            document.getElementById("meridian").innerHTML = "PM";
+        }
+        else if(Number(currentDate1.getHours())<12){
+            document.getElementById("meridian").innerHTML = "AM";     
+        }
+
+        if(a===60){
             document.getElementById("second").innerHTML = 0;
             var b = document.getElementById("minute").innerHTML;
             b = Number(b) + 1;
             document.getElementById("minute").innerHTML = b;
 
         }
-        if(b==10){
+        if(b==60){
             document.getElementById("minute").innerHTML = 0;
             var c = document.getElementById("hour").innerHTML;
             c = Number(c) + 1;
             document.getElementById("hour").innerHTML = c;
         }
-        if(c==10){
+        if(c==13){
             document.getElementById("hour").innerHTML = 1;
             document.getElementById("minute").innerHTML = 0;
             document.getElementById("second").innerHTML = 0;
         }
     }
-    setInterval(secondCount, 1000);
+    setTimeout(setInterval(secondCount, 1000), 1000);
     
 
 </script>
 
-<body>
-    <div class="block">
+<body onload="currentTime()">
+    <div class="block"><div id="day"></div>
+        <div style="display:flex; justify-content: center; text-align: center;">
         <div id="hour"></div>
         <div class="colon">:</div>
         <div id="minute"></div>
         <div class="colon">:</div>
         <div id="second"></div>
+        <div id="meridian"></div></div>
     </div>
 </body>
 </html>
